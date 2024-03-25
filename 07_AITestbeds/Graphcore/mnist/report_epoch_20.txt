@@ -1,0 +1,27 @@
+srun: job 20360 queued and waiting for resources
+srun: job 20360 has been allocated resources
+Epochs:   0%|          | 0/20 [00:00<?,[00:17:42.824] [poptorch:cpp] [warning] [DISPATCHER] Type coerced from Long to Int for tensor id 10150 [00:00<?, ?it/s]
+Graph compilation: 100%|██████████| 100/100 [00:21<00:00]
+Epochs: 100%|██████████| 20/20 [03:15<00:00,  9.76s/it]
+Graph compilation: 100%|██████████| 100/100 [00:15<00:00]                          
+ 95%|██████?TrainingModelWithLoss(:00, 13.83it/s]<00:02]
+  (model): Network(
+    (layer1): Block(
+      (conv): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (relu): ReLU()
+    )
+    (layer2): Block(
+      (conv): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (relu): ReLU()
+    )
+    (layer3): Linear(in_features=1600, out_features=128, bias=True)
+    (layer3_act): ReLU()
+    (layer3_dropout): Dropout(p=0.5, inplace=False)
+    (layer4): Linear(in_features=128, out_features=10, bias=True)
+    (softmax): Softmax(dim=1)
+  )
+  (loss): CrossEntropyLoss()
+)
+Accuracy on test set: 77.70%
