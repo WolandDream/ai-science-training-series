@@ -1,0 +1,36 @@
+[93m
+Warning: [0m[0mbuild_model() discovered a cached build of bert_tiny_custom, but decided to rebuild for the following reasons: [0m
+[0m         [0m[0m[0m
+[0m         [0m[0m- Input shape of model "bert_tiny_custom" changed from {'attention_mask': (2, 256), 'input_ids': (2, 256)} to {'attention_mask': (1, 64), 'input_ids': (1, 64)} since the last time it was built. [0m
+[0m         [0m[0m[0m
+[0m         [0m[0mbuild_model() will now rebuild your model to ensure correctness. You can change this policy by setting the build_model(rebuild=...) argument.[0m
+
+
+
+[1mBuilding "bert_tiny_custom"[0m
+[0m      Exporting PyTorch to ONNX   [0m
+[0m      Optimizing ONNX file   [0m
+[0m      Checking for Op support   [0m
+[0m      Converting to FP16   [0m
+[0m      Compiling model   [0m
+[0m      Assembling model   [0m
+[1A[1A[1A[1A[1A[1A[92m    ✓ [0m[0mExporting PyTorch to ONNX   [0m
+[92m    ✓ [0m[0mOptimizing ONNX file   [0m
+      Checking for Op support         Checking for Op support.        Checking for Op support..       Checking for Op support...[92m    ✓ [0m[0mChecking for Op support   [0m
+[92m    ✓ [0m[0mConverting to FP16   [0m
+      Compiling model         Compiling model.        Compiling model..       Compiling model...      Compiling model         Compiling model.        Compiling model.. [92m    ✓ [0m[0mCompiling model   [0m
+      Assembling model         Assembling model.        Assembling model..       Assembling model...      Assembling model         Assembling model.        Assembling model..       Assembling model...      Assembling model   [92m    ✓ [0m[0mAssembling model   [0m
+[92m
+Woohoo! [0m[0mSaved to [0m[1m~/.cache/groqflow/bert_tiny_custom[0m[0m[0m
+Preprocessing data.
+[96m
+Info: [0m[0mNo inputs received for benchmark. Using the inputs provided during model compilation.[0m
+Running inference on GroqChip.
+Running inference using PyTorch model (CPU).
+  0%|          | 0/2210 [00:00<?, ?it/s]  3%|▎         | 63/2210 [00:00<00:03, 622.55it/s]  6%|▌         | 127/2210 [00:00<00:03, 632.16it/s]  9%|▊         | 191/2210 [00:00<00:03, 634.18it/s] 12%|█▏        | 255/2210 [00:00<00:03, 635.25it/s] 14%|█▍        | 320/2210 [00:00<00:02, 638.99it/s] 17%|█▋        | 384/2210 [00:00<00:02, 635.55it/s] 20%|██        | 449/2210 [00:00<00:02, 637.59it/s] 23%|██▎       | 514/2210 [00:00<00:02, 639.23it/s] 26%|██▌       | 579/2210 [00:00<00:02, 640.98it/s] 29%|██▉       | 644/2210 [00:01<00:02, 642.78it/s] 32%|███▏      | 709/2210 [00:01<00:02, 642.23it/s] 35%|███▌      | 774/2210 [00:01<00:02, 642.41it/s] 38%|███▊      | 839/2210 [00:01<00:02, 642.14it/s] 41%|████      | 904/2210 [00:01<00:02, 641.94it/s] 44%|████▍     | 969/2210 [00:01<00:01, 641.72it/s] 47%|████▋     | 1034/2210 [00:01<00:01, 641.28it/s] 50%|████▉     | 1099/2210 [00:01<00:01, 643.00it/s] 53%|█████▎    | 1164/2210 [00:01<00:01, 638.16it/s] 56%|█████▌    | 1230/2210 [00:01<00:01, 641.93it/s] 59%|█████▊    | 1296/2210 [00:02<00:01, 646.53it/s] 62%|██████▏   | 1362/2210 [00:02<00:01, 650.23it/s] 65%|██████▍   | 1428/2210 [00:02<00:01, 651.12it/s] 68%|██████▊   | 1495/2210 [00:02<00:01, 653.93it/s] 71%|███████   | 1562/2210 [00:02<00:00, 656.07it/s] 74%|███████▎  | 1628/2210 [00:02<00:00, 655.78it/s] 77%|███████▋  | 1695/2210 [00:02<00:00, 657.57it/s] 80%|███████▉  | 1762/2210 [00:02<00:00, 658.95it/s] 83%|████████▎ | 1829/2210 [00:02<00:00, 659.90it/s] 86%|████████▌ | 1896/2210 [00:02<00:00, 660.02it/s] 89%|████████▉ | 1963/2210 [00:03<00:00, 660.13it/s] 92%|█████████▏| 2030/2210 [00:03<00:00, 661.01it/s] 95%|█████████▍| 2097/2210 [00:03<00:00, 661.42it/s] 98%|█████████▊| 2164/2210 [00:03<00:00, 658.48it/s]100%|██████████| 2210/2210 [00:03<00:00, 648.27it/s]
++--------+----------+-------------------------+----------------+----------------------+-------------+
+| Source | Accuracy | end-to-end latency (ms) | end-to-end IPS | on-chip latency (ms) | on-chip IPS |
++--------+----------+-------------------------+----------------+----------------------+-------------+
+|  cpu   |  77.47%  |           1.54          |     647.89     |          --          |      --     |
+|  groq  |  77.47%  |           0.05          |    18691.81    |         0.02         |   43126.17  |
++--------+----------+-------------------------+----------------+----------------------+-------------+
