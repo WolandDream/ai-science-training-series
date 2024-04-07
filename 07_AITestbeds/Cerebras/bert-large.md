@@ -1,20 +1,40 @@
 # BERT-Large on Cerebras
 
+<<<<<<< HEAD
 * Go to directory with the BERT example. 
   ```bash
   cd ~/R_2.0.3/modelzoo/modelzoo/transformers/pytorch/bert
   ```
 
 * Activate PyTroch virtual Environment 
+=======
+* Go to the directory with the BERT example. 
+  ```bash
+  cd ~/R_2.1.1/modelzoo/modelzoo/transformers/pytorch/bert
+  ```
+
+* Activate PyTorch virtual Environment 
+>>>>>>> upstream/main
   ```bash
   source ~/R_2.0.3/venv_cerebras_pt/bin/activate
   ```
 
+<<<<<<< HEAD
 * Replace config file with correct configurations file. 
+=======
+* Replace the config file with the correct configurations file. 
+>>>>>>> upstream/main
   Commonly used various pre-processed datasets are available the systems for your conveneince. Config file needs to be changed to point to correct data path. For your convenience, modified config files are available. Copy them to replace config file in current directory.
   ```bash
   cp /software/cerebras/dataset/bert_large/bert_large_MSL128_sampleds.yaml configs/bert_large_MSL128_sampleds.yaml
   ```
+<<<<<<< HEAD
+=======
+* Note: change the path of the vocabulary file referenced in configs/bert_large_MSL128_sampleds.yaml to 
+  ``` bash
+  /home/$(whoami)/R_2.1.1/modelzoo/modelzoo/transformers/vocab/google_research_uncased_L-12_H-768_A-12.txt
+  ```
+>>>>>>> upstream/main
 
 * Run Training Job
   ```bash
@@ -26,7 +46,11 @@
   --params configs/bert_large_MSL128_sampleds.yaml \
   --num_workers_per_csx=1 --mode train \
   --model_dir $MODEL_DIR --mount_dirs /home/ /software/ \
+<<<<<<< HEAD
   --python_paths /home/$(whoami)/R_2.0.3/modelzoo/ \
+=======
+  --python_paths /home/$(whoami)/R_2.1.1/modelzoo/ \
+>>>>>>> upstream/main
   --compile_dir $(whoami) |& tee mytest.log
   ```
   <details>
@@ -121,4 +145,8 @@
   2024-03-14 03:35:51,746 INFO:   Training completed successfully!
   2024-03-14 03:35:51,747 INFO:   Processed 1024000 sample(s) in 1025.603128781 seconds.
     ```
+<<<<<<< HEAD
   </details>
+=======
+  </details>
+>>>>>>> upstream/main

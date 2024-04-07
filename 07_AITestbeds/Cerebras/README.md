@@ -18,20 +18,31 @@ ssh ALCFUserID@cerebras.ai.alcf.anl.gov
 ```bash
 #Make your home directory navigable
 chmod a+xr ~/
+<<<<<<< HEAD
 mkdir ~/R_2.0.3
 chmod a+x ~/R_2.0.3/
 cd ~/R_2.0.3
+=======
+mkdir ~/R_2.1.1
+chmod a+x ~/R_2.1.1/
+cd ~/R_2.1.1
+>>>>>>> upstream/main
 # Note: "deactivate" does not actually work in scripts.
 deactivate
 rm -r venv_cerebras_pt
 /software/cerebras/python3.8/bin/python3.8 -m venv venv_cerebras_pt
 source venv_cerebras_pt/bin/activate
 pip install --upgrade pip
+<<<<<<< HEAD
 pip install cerebras_pytorch==2.0.2
+=======
+pip install cerebras_pytorch==2.1.1
+>>>>>>> upstream/main
 ```
 
 ## Clone Cerebras modelzoo
 
+<<<<<<< HEAD
 We use example from [Cerebras Modelzoo repository](https://github.com/Cerebras/modelzoo) for this hands-on. 
 
 * Clone the modezoo repository.<br>
@@ -47,6 +58,22 @@ We use example from [Cerebras Modelzoo repository](https://github.com/Cerebras/m
 * Install requirements for modelzoo
     ```bash
     cd ~/R_2.0.3/modelzoo
+=======
+We use an example from [Cerebras Modelzoo repository](https://github.com/Cerebras/modelzoo) for this hands-on. 
+
+* Clone the modezoo repository.<br>
+```bash
+mkdir ~/R_2.1.1
+cd ~/R_2.1.1
+git clone https://github.com/Cerebras/modelzoo.git
+cd modelzoo
+git tag
+git checkout Release_2.1.1    
+```
+* Install requirements for modelzoo
+    ```bash
+    cd ~/R_2.1.1/modelzoo
+>>>>>>> upstream/main
     pip install -r requirements.txt 
     ```
 

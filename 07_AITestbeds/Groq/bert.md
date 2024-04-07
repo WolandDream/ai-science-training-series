@@ -8,9 +8,15 @@
 qsub -I -l walltime=1:00:00
 ```
 
+<<<<<<< HEAD
 #### Go to directory with Resnet50 example. 
 ```bash
 cd ~groqflow/proof_points/natural_language_processing/bert
+=======
+#### Go to directory with BERT example. 
+```bash
+cd <path-to-groqflow>/proof_points/natural_language_processing/bert
+>>>>>>> upstream/main
 ```
 
 #### Activate groqflow virtual Environment 
@@ -76,4 +82,8 @@ Running inference using PyTorch model (CPU).
 |  groq  |  77.47%  |           0.06          |    17147.76    |         0.03         |   32358.97  |
 +--------+----------+-------------------------+----------------+----------------------+-------------+
     ```
+<<<<<<< HEAD
 </details>
+=======
+</details>
+>>>>>>> upstream/main
