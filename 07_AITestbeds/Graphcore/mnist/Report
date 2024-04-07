@@ -1,0 +1,22 @@
+Epochs tests
+learning_rate = 0.05; epochs = 5; batch_size = 8; test_batch_size = 80
+Accuracy on test set: 98.32%
+learning_rate = 0.05; epochs = 10; batch_size = 8; test_batch_size = 80
+Accuracy on test set: 98.22%
+learning_rate = 0.05; epochs = 20; batch_size = 8; test_batch_size = 80
+Accuracy on test set: 77.70%
+For learning rate 0.05 the optiman number of epochs for training is 5 and 10. For 20 epochs training we see effect of overfitting.
+
+Learning rate tests
+learning_rate = 0.005; epochs = 10; batch_size = 8; test_batch_size = 80
+Accuracy on test set: 98.50%
+learning_rate = 0.0005; epochs = 10; batch_size = 8; test_batch_size = 80
+Accuracy on test set: 93.67%
+The optimal learning rate is 0.005. It increases performance for 10 epochs. The learning rate 0.0005 is too low and the resulting model is undertrained
+
+Batch size tests
+learning_rate = 0.005; epochs = 10; batch_size = 16; test_batch_size = 80
+Accuracy on test set: 97.86%
+learning_rate = 0.005; epochs = 10; batch_size = 4; test_batch_size = 80
+Accuracy on test set: 98.74%
+The optimal batch size is 4 in combination with lr 0.004 ensuring that weights of the model are adjusted more often.

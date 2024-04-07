@@ -1,0 +1,16 @@
+Performance report for different Testbeds
+
+1. Sambanova
+
+Report is located by file path "./Sambanova/Report"
+The optimal number of tasks is 4, less or more tasks increase job time.
+
+2. Graphcore
+The performance report with parameter analyses is in the file "Graphcore/mnist/Report"
+
+3. Groq
+The custom runs report is  in the "Groq/bert/Report"
+
+4. Cerebras
+The runs report is in the "Cerebras/R_2.1.1/modelzoo/modelzoo/transformers/pytorch/bert/Report"
+The minimum time is for the batch size 512. The best score is for the batch size 1024.
